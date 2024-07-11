@@ -1,3 +1,4 @@
+--1
 return {
           Prompt = function (Warn_Type,Content, Args)
                     local win_warn = Instance.new("ImageLabel")
@@ -9,9 +10,9 @@ return {
                     local UIListLayout = Instance.new("UIListLayout")
                     local fixer = Instance.new("Frame")
                     local title = Instance.new("TextLabel")
-		local sound = Instance.new("Sound", win_warn)sound.Name=""
-		sound.SoundId = "rbxassetid://8503530582"
-		sound.Volume = 3
+		    local sound = Instance.new("Sound", win_warn)sound.Name=""
+		    sound.SoundId = "rbxassetid://8503530582"
+		    sound.Volume = 3
                     win_warn.Name = "win_warn"
                     win_warn.Parent = Instance.new("ScreenGui",game:GetService("CoreGui"))
                     win_warn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
