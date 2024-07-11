@@ -32,7 +32,7 @@ return {
                     icon.Size = UDim2.new(0, 46, 0, 46)
                     icon.Image = ""
                     if Warn_Type == "info" then
-			sound.SoundId = "rbxassetid://2389339814"
+			sound.SoundId = "rbxassetid://8499261098"
                               icon.Image="http://www.roblox.com/asset/?id=18354443269"
                     elseif Warn_Type == "error" then
 			sound.SoundId =  "rbxassetid://8499261098"
@@ -112,7 +112,14 @@ return {
                     title.TextSize = 14.000
                     title.TextXAlignment = Enum.TextXAlignment.Left
                     sound:Play()
-		
+		if Args.theme ~= "" then
+			win_warn.Image=Args.theme
+			ar.BackgroundTransparency=1
+			deco.BackgroundTransparency=1
+			fixer.BackgroundTransparency=1
+			title.BackgroundTransparency=1
+			
+		end
 		local anim=function(b)
                               b.MouseEnter:Connect(function()
                                         b.BackgroundColor3=Color3.fromRGB(188, 210, 207)
