@@ -111,7 +111,9 @@ return {
                     title.TextColor3 = Color3.fromRGB(255, 255, 255)
                     title.TextSize = 14.000
                     title.TextXAlignment = Enum.TextXAlignment.Left
-                    local anim=function(b)
+                    sound:Play()
+		
+		local anim=function(b)
                               b.MouseEnter:Connect(function()
                                         b.BackgroundColor3=Color3.fromRGB(188, 210, 207)
                                         b.BorderColor3=Color3.fromRGB(0, 167, 209)
