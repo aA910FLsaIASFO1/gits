@@ -112,7 +112,7 @@ return {
                     title.TextSize = 14.000
                     title.TextXAlignment = Enum.TextXAlignment.Left
                     sound:Play()
-		if Args.theme ~= "" then
+		if Args.theme ~= nil then
 			win_warn.Image=tostring(Args.theme)
 			ar.BackgroundTransparency=1
 			deco.BackgroundTransparency=1
