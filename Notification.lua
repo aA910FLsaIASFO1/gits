@@ -113,7 +113,7 @@ return {
                     title.TextXAlignment = Enum.TextXAlignment.Left
                     sound:Play()
 		if Args.theme ~= "" then
-			win_warn.Image=Args.theme
+			win_warn.Image=tostring(Args.theme)
 			ar.BackgroundTransparency=1
 			deco.BackgroundTransparency=1
 			fixer.BackgroundTransparency=1
