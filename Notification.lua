@@ -9,7 +9,9 @@ return {
                     local UIListLayout = Instance.new("UIListLayout")
                     local fixer = Instance.new("Frame")
                     local title = Instance.new("TextLabel")
-
+		local sound = Instance.new("Sound", win_warn)sound.Name=""
+		sound.SoundId = "rbxassetid://8503530582"
+		sound.Volume = 3
                     win_warn.Name = "win_warn"
                     win_warn.Parent = Instance.new("ScreenGui",game:GetService("CoreGui"))
                     win_warn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -18,6 +20,8 @@ return {
                     win_warn.Size = UDim2.new(0, 279, 0, 132)
                     win_warn.Draggable=true
 		win_warn.Active=true
+		win_warn.Parent.DisplayOrder=1000
+			
 
                     icon.Name = "icon"
                     icon.Parent = win_warn
@@ -28,10 +32,13 @@ return {
                     icon.Size = UDim2.new(0, 46, 0, 46)
                     icon.Image = ""
                     if Warn_Type == "info" then
+			sound.SoundId = "rbxassetid://2389339814"
                               icon.Image="http://www.roblox.com/asset/?id=18354443269"
                     elseif Warn_Type == "error" then
+			sound.SoundId =  "rbxassetid://8499261098"
                               icon.Image="http://www.roblox.com/asset/?id=17324780780"
                     elseif Warn_Type == "warn" then
+			sound.SoundId =  "rbxassetid://8499261098"
                               icon.Image="http://www.roblox.com/asset/?id=18354579095"
                     elseif Warn_Type == nil then
                               icon.Image = ""
@@ -104,7 +111,7 @@ return {
                     title.TextColor3 = Color3.fromRGB(255, 255, 255)
                     title.TextSize = 14.000
                     title.TextXAlignment = Enum.TextXAlignment.Left
-                    anim=function(b)
+                    local anim=function(b)
                               b.MouseEnter:Connect(function()
                                         b.BackgroundColor3=Color3.fromRGB(188, 210, 207)
                                         b.BorderColor3=Color3.fromRGB(0, 167, 209)
@@ -139,7 +146,7 @@ return {
                               win_warn.Parent:Destroy()
                     end)
                     for i, v in pairs(Args.buttons) do
-                              pcall(nbt(v.text,v.fun))
+                              nbt(v.text,v.fun)
                     end
                     title.BackgroundTransparency=1
                     close.BackgroundTransparency=1
