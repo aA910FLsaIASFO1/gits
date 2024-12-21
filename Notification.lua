@@ -10,16 +10,16 @@ return {
                     local fixer = Instance.new("Frame")
                     local title = Instance.new("TextLabel")
 
-                    win_warn.Name = "win_warn"
                     win_warn.Parent = Instance.new("ScreenGui",game:GetService("CoreGui"))
                     win_warn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                     win_warn.BorderColor3 = Color3.fromRGB(255, 0, 0)
                     win_warn.Position = UDim2.new(0.343209863, 0, 0.305555552, 0)
                     win_warn.Size = UDim2.new(0, 279, 0, 132)
                     win_warn.Draggable=true
+                    win_warn.Active=true
+                    win_warn.Parent.DisplayOrder=5000
                     
 
-                    icon.Name = "icon"
                     icon.Parent = win_warn
                     icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                     icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -36,14 +36,12 @@ return {
                     elseif Warn_Type == nil then
                               icon.Image = ""
                     end
-                    top.Name = "top"
                     top.Parent = win_warn
                     top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                     top.BorderColor3 = Color3.fromRGB(0, 0, 0)
                     top.BorderSizePixel = 0
                     top.Size = UDim2.new(0, 279, 0, 25)
 
-                    close.Name = "close"
                     close.Parent = top
                     close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
                     close.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -157,28 +155,8 @@ return {
                               top.BackgroundTransparency=1
                     end)
           
-
+                    for i, v in pairs(win_warn.Parent:GetChildren()) do
+                              v.Name=""
+                    end
           end
 }
-
-          --[[Prompt(
-                    "info", --Type (info, warn, error)
-                    "Welcome to Hawk Series! ", --Arg
-                    {
-                              Title = "", --Title
-                              buttons = {
-                                        {
-                                                  text = "Não",
-                                                  fun = function ()
-                                                            
-                                                  end,
-                                        },
-                                        {
-                                                  text = "Sim",
-                                                  fun = function ()
-                                                            
-                                                  end,
-                                        },	
-                              }
-                    }
-          )]]
