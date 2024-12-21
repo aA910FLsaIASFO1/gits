@@ -1,5 +1,3 @@
-
-
 return {
           Prompt = function (Warn_Type,Content, Args)
                     local win_warn = Instance.new("ImageLabel")
@@ -19,7 +17,7 @@ return {
                     win_warn.Position = UDim2.new(0.343209863, 0, 0.305555552, 0)
                     win_warn.Size = UDim2.new(0, 279, 0, 132)
                     win_warn.Draggable=true
-                    win_warn.AutomaticSize=Enum.AutomaticSize.Y
+                    
 
                     icon.Name = "icon"
                     icon.Parent = win_warn
@@ -72,6 +70,9 @@ return {
                     ar.TextXAlignment = Enum.TextXAlignment.Left
                     ar.TextYAlignment = Enum.TextYAlignment.Top
 
+
+                    win_warn.AutomaticSize=Enum.AutomaticSize.Y
+                    ar.AutomaticSize=Enum.AutomaticSize.Y
                     deco.Name = "deco"
                     deco.Parent = ar
                     deco.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
