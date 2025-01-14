@@ -23,7 +23,7 @@ Engine.AssertFiles = function(patch, item)
     end
 end
 
-Engine.AssertFolders({"Autoexec", "Themes", "ExecutorConfigs", "tabsV3", "tabs", "s", "b", "ScriptHub"})
+Engine.AssertFolders({"Autoexec", "Themes", "ExecutorConfigs", "tabsV3", "tabs", "s", "b", "ScriptHub", "ExecutorConfigs/Community"})
 
 
 Engine.Init = function(Identity)
